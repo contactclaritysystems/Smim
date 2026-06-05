@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Tuyauterie navale et industrielle à Marseille – SMIM</title>
+<meta name="description" content="SMIM : tuyauterie navale et industrielle à Marseille, La Ciotat, Fos-sur-Mer. Réseaux inox, réparation circuits, maintenance ferries. ☎ 07 86 66 99 69"/>
+<meta name="robots" content="index,follow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f4f1;--white:#fff;--ink:#161614;--ink2:#3e3e3b;--ink3:#8c8c87;
+  --line:#e2e1dd;--copper:#a0785a;--dark:#2d3035;--navy:#1a2535;
+  --serif:'DM Serif Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 3rem;height:68px;background:rgba(245,244,241,.93);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);transition:background .3s}
+.nav-brand{display:flex;flex-direction:column;text-decoration:none;gap:0}
+.nav-brand-name{font-family:var(--serif);font-size:1.2rem;letter-spacing:.04em;color:var(--ink);line-height:1}
+.nav-brand-sub{font-size:.58rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:1.6rem;list-style:none}
+.nav-links a{font-size:.81rem;font-weight:400;letter-spacing:.02em;color:var(--ink2);text-decoration:none;transition:color .2s;padding-bottom:2px;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--copper);transform:scaleX(0);transition:transform .25s}
+.nav-links a:hover,.nav-links a.act{color:var(--ink)}
+.nav-links a.act::after,.nav-links a:hover::after{transform:scaleX(1)}
+.nav-right{display:flex;align-items:center;gap:.7rem}
+.nav-cta{background:var(--ink);color:var(--white)!important;padding:.46rem 1.2rem;border-radius:50px;font-weight:500;font-size:.8rem;text-decoration:none;transition:opacity .2s;white-space:nowrap}
+.nav-cta:hover{opacity:.75}
+.hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.4rem}
+.hbg span{display:block;width:22px;height:1.5px;background:var(--ink);transition:all .3s}
+.mob{display:none;position:fixed;inset:0;top:68px;background:rgba(245,244,241,.98);backdrop-filter:blur(20px);z-index:199;flex-direction:column;align-items:center;justify-content:center;gap:1.6rem}
+.mob.open{display:flex}
+.mob a{font-family:var(--serif);font-size:1.9rem;color:var(--ink);text-decoration:none;transition:color .2s}
+.mob a:hover{color:var(--copper)}
+.mob-cta{background:var(--ink)!important;color:var(--white)!important;padding:.9rem 2.5rem!important;border-radius:50px!important;font-family:var(--sans)!important;font-size:1rem!important;font-weight:500!important;font-style:normal}
+
+/* FOOTER */
+footer{background:var(--ink)}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding:4rem 3rem 3rem}
+.ft-name{font-family:var(--serif);font-size:1.3rem;color:rgba(255,255,255,.65);margin-bottom:.2rem}
+.ft-sub{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:1.4rem}
+.ft-info{font-size:.81rem;color:rgba(255,255,255,.42);line-height:2}
+.ft-info a{color:inherit;text-decoration:none}
+.ft-info a:hover{color:rgba(255,255,255,.8)}
+.ft-ttl{font-size:.63rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.22);margin-bottom:1.1rem}
+.ft-col a{display:block;font-size:.81rem;color:rgba(255,255,255,.37);text-decoration:none;margin-bottom:.48rem;transition:color .2s}
+.ft-col a:hover{color:rgba(255,255,255,.8)}
+.ft-hrs{font-size:.81rem;color:rgba(255,255,255,.37);line-height:2}
+.ft-hrs strong{color:rgba(255,255,255,.58);font-weight:500}
+.ft-bot{border-top:1px solid rgba(255,255,255,.07);padding:1.1rem 3rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem}
+.ft-bot p{font-size:.68rem;color:rgba(255,255,255,.16)}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--sans);font-size:.87rem;font-weight:500;text-decoration:none;border-radius:50px;transition:opacity .2s,transform .15s;cursor:pointer;border:none}
+.btn:hover{opacity:.83;transform:translateY(-1px)}
+.btn-dark{background:var(--ink);color:var(--white);padding:.78rem 1.9rem}
+.btn-ghost{background:transparent;color:var(--ink);padding:.72rem 1.7rem;border:1px solid var(--line)}
+.btn-ghost:hover{border-color:var(--ink3);opacity:1}
+.btn-wa{background:#25D366;color:#fff;padding:.78rem 1.9rem}
+.btn-call{background:#fff;color:var(--ink);padding:.78rem 1.9rem}
+.btn-wo{background:transparent;color:rgba(255,255,255,.8);padding:.72rem 1.7rem;border:1px solid rgba(255,255,255,.28);border-radius:50px;font-family:var(--sans);font-size:.87rem;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:border-color .2s,color .2s}
+.btn-wo:hover{border-color:rgba(255,255,255,.65);color:#fff}
+
+/* UTILS */
+.sp{padding:6rem 3rem}
+.sp-sm{padding:4rem 3rem}
+.lbl{font-size:.67rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);margin-bottom:.8rem}
+h1.page-h1{font-family:var(--serif);font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:400;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+h1.page-h1 em{font-style:italic}
+h2{font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.8rem);font-weight:400;line-height:1.12;letter-spacing:-.02em}
+h2 em{font-style:italic}
+h3{font-family:var(--serif);font-size:1.25rem;font-weight:400;letter-spacing:-.01em;margin-bottom:.6rem}
+.bt{font-size:.9rem;font-weight:300;line-height:1.75;color:var(--ink3)}
+.dv{height:1px;background:var(--line)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.bc{padding:.9rem 3rem;font-size:.73rem;color:var(--ink3)}
+.bc a{color:var(--ink3);text-decoration:none}.bc a:hover{color:var(--ink)}
+
+/* TRUST */
+.trust{background:var(--dark);padding:.95rem 3rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.trust::-webkit-scrollbar{display:none}
+.ti{display:flex;align-items:center;gap:.55rem;padding:0 2rem;flex-shrink:0;border-right:1px solid rgba(255,255,255,.07)}
+.ti:first-child{padding-left:0}.ti:last-child{border-right:none}
+.ti-t{font-size:.74rem;color:rgba(255,255,255,.42);white-space:nowrap}
+.ti-t strong{color:rgba(255,255,255,.82);font-weight:500}
+
+/* 3 ACTIVITY CARDS */
+.act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.act-card{padding:3rem 2.5rem;border-right:1px solid var(--line);text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background .2s}
+.act-card:last-child{border-right:none}
+.act-card:hover{background:var(--bg)}
+.act-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.act-card:hover::after{transform:scaleX(1)}
+.act-ico{font-size:2rem;margin-bottom:1.5rem}
+.act-name{font-family:var(--serif);font-size:1.6rem;font-weight:400;letter-spacing:-.01em;margin-bottom:1rem;color:var(--ink)}
+.act-list{list-style:none;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+.act-list li{font-size:.83rem;font-weight:300;color:var(--ink3);display:flex;align-items:center;gap:.6rem}
+.act-list li::before{content:'';width:12px;height:1px;background:var(--copper);flex-shrink:0}
+.act-link{font-size:.78rem;font-weight:500;color:var(--copper)}
+
+/* SERVICE GRID */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.svc{background:var(--white);padding:2.3rem 2rem;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;overflow:hidden;transition:background .2s;text-decoration:none;display:block;color:inherit}
+.svc:nth-child(3n){border-right:none}
+.svc:nth-last-child(-n+3){border-bottom:none}
+.svc:hover{background:var(--bg)}
+.svc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--copper);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.svc:hover::after{transform:scaleX(1)}
+.svc-n{font-size:.66rem;color:var(--copper);font-weight:500;letter-spacing:.12em;margin-bottom:1.3rem}
+.svc-name{font-family:var(--serif);font-size:1.25rem;margin-bottom:.55rem;color:var(--ink)}
+.svc-desc{font-size:.82rem;font-weight:300;line-height:1.65;color:var(--ink3);margin-bottom:.9rem}
+.svc-arr{font-size:.76rem;color:var(--copper);font-weight:500}
+
+/* GALLERY */
+.gal{display:grid;grid-template-columns:1.55fr 1fr 1fr;grid-template-rows:255px 255px;gap:5px}
+.gi{overflow:hidden;position:relative;background:var(--line)}
+.gi:first-child{grid-row:1/3}
+.gi img{width:100%;height:100%;object-fit:cover;filter:brightness(.9) saturate(.82);transition:transform .6s cubic-bezier(.25,.46,.45,.94),filter .4s}
+.gi:hover img{transform:scale(1.05);filter:brightness(1) saturate(1)}
+.gi::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--copper);opacity:0;transition:opacity .3s}
+.gi:hover::after{opacity:1}
+.gi-cap{position:absolute;bottom:0;left:0;right:0;padding:.9rem 1.2rem;background:linear-gradient(to top,rgba(0,0,0,.65),transparent);font-size:.74rem;color:rgba(255,255,255,.9);opacity:0;transition:opacity .3s;pointer-events:none}
+.gi:hover .gi-cap{opacity:1}
+
+/* REVIEWS */
+.rev{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.06)}
+.rc{background:#353840;padding:2.1rem 1.9rem}
+.rc-stars{display:flex;gap:3px;margin-bottom:1rem}
+.star{width:13px;height:13px;fill:var(--copper)}
+.rc-txt{font-family:var(--serif);font-style:italic;font-size:.96rem;line-height:1.65;color:rgba(255,255,255,.7);margin-bottom:1.4rem}
+.rc-auth{display:flex;align-items:center;gap:.8rem}
+.rc-init{width:31px;height:31px;border-radius:50%;background:rgba(160,120,90,.12);border:1px solid rgba(160,120,90,.3);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:500;color:var(--copper)}
+.rc-name{font-size:.79rem;font-weight:500;color:rgba(255,255,255,.78)}
+.rc-src{font-size:.68rem;color:rgba(255,255,255,.28);margin-top:.1rem}
+
+/* ZONES */
+.zones{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.8rem}
+.zt{background:var(--white);border:1px solid var(--line);padding:.48rem 1rem;font-size:.8rem;color:var(--ink2);border-radius:4px;transition:border-color .2s,color .2s}
+.zt:hover{border-color:var(--copper);color:var(--copper)}
+
+/* CONTACT */
+.cta-blk{display:flex;align-items:center;gap:.9rem;background:var(--ink);color:#fff;padding:1rem 1.6rem;border-radius:10px;text-decoration:none;transition:opacity .2s;margin-bottom:.7rem}
+.cta-blk:hover{opacity:.85}
+.cta-blk-ico{font-size:1.4rem;flex-shrink:0}
+.cta-blk-lbl{font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38)}
+.cta-blk-val{font-size:.98rem;font-weight:500;color:#fff;margin-top:.1rem}
+.cta-blk-wa{background:#25D366}
+.sep-or{display:flex;align-items:center;gap:1rem;margin:1.4rem 0}
+.sep-or span{font-size:.68rem;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.sep-or::before,.sep-or::after{content:'';flex:1;height:1px;background:var(--line)}
+.fg{display:flex;flex-direction:column;gap:.32rem;margin-bottom:.8rem}
+.fg label{font-size:.65rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+.fg input,.fg select,.fg textarea{background:var(--white);border:1px solid var(--line);color:var(--ink);font-family:var(--sans);font-size:.87rem;font-weight:300;padding:.78rem 1rem;border-radius:6px;outline:none;transition:border-color .2s;-webkit-appearance:none;resize:vertical}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--copper)}
+.fg textarea{min-height:90px}
+.two-fg{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+
+/* PAGE HERO */
+.ph{padding:8.5rem 3rem 4rem;background:var(--white);border-bottom:1px solid var(--line)}
+
+/* STATS BAR */
+.stats{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:2.5rem 3rem;display:grid;grid-template-columns:repeat(4,1fr);text-align:center;gap:2rem}
+.s-num{font-family:var(--serif);font-size:2.4rem;font-weight:400;color:var(--copper);line-height:1}
+.s-lbl{font-size:.68rem;font-weight:400;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-top:.4rem}
+
+/* ABOUT IMG */
+.ab-img{position:relative;overflow:hidden}
+.ab-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.68)}
+.ab-tag{position:absolute;bottom:1.5rem;left:1.5rem;background:rgba(245,244,241,.92);backdrop-filter:blur(8px);padding:.5rem .9rem;font-size:.67rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink2)}
+.ab-list{list-style:none;display:flex;flex-direction:column;gap:.75rem;margin:1.7rem 0 2rem}
+.ab-list li{display:flex;align-items:flex-start;gap:.9rem;font-size:.87rem;font-weight:300;color:var(--ink2);line-height:1.5}
+.ab-list li::before{content:'';display:block;width:15px;height:1px;background:var(--copper);margin-top:.72rem;flex-shrink:0}
+
+/* ANIMS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.ha1{animation:fadeUp .9s ease both}
+.ha2{animation:fadeUp .9s .12s ease both}
+.ha3{animation:fadeUp .9s .24s ease both}
+.ha4{animation:fadeUp .9s .36s ease both}
+.r{opacity:0;transform:translateY(22px);transition:opacity .75s,transform .75s}
+.r.v{opacity:1;transform:none}
+.r.d1{transition-delay:.1s}.r.d2{transition-delay:.2s}.r.d3{transition-delay:.3s}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:0 1.2rem}
+  .nav-links,.nav-right{display:none}
+  .hbg{display:flex}
+  .sp{padding:4rem 1.5rem}.sp-sm{padding:3rem 1.5rem}
+  .bc{padding:.8rem 1.5rem}
+  .act-grid{grid-template-columns:1fr}
+  .act-card{border-right:none!important;border-bottom:1px solid var(--line)!important}
+  .act-card:last-child{border-bottom:none!important}
+  .svc-grid{grid-template-columns:1fr}
+  .svc{border-right:none!important;border-bottom:1px solid var(--line)!important}
+  .svc:last-child{border-bottom:none!important}
+  .svc::after{display:none}
+  .gal{grid-template-columns:1fr 1fr;grid-template-rows:repeat(3,175px)}
+  .gi:first-child{grid-row:auto}
+  .rev{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr;gap:2.5rem}
+  .two-fg{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .ft{grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 1.5rem}
+  .ft-bot{padding:1rem 1.5rem}
+  .trust{padding:.95rem 1.2rem}.ti{padding:0 1.4rem}
+  .ph{padding:6.5rem 1.5rem 3rem}
+}
+@media(max-width:540px){
+  .ft{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head><body>
+<nav id="nav">
+  <a href="index.html" class="nav-brand"><span class="nav-brand-name">SMIM</span><span class="nav-brand-sub">Métallerie · Chaudronnerie · Tuyauterie</span></a>
+  <ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="metallerie.html">Métallerie</a></li><li><a href="chaudronnerie.html">Chaudronnerie</a></li><li><a href="tuyauterie.html" class='act'>Tuyauterie</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="contact.html">Contact</a></li></ul>
+  <div class="nav-right"><a href="tel:0786669969" class="nav-cta">&#9742; Devis gratuit</a></div>
+  <button class="hbg" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob" id="mob"><a href="index.html">Accueil</a><a href="metallerie.html">Métallerie</a><a href="chaudronnerie.html">Chaudronnerie</a><a href="tuyauterie.html">Tuyauterie</a><a href="realisations.html">Réalisations</a><a href="contact.html">Contact</a>
+  <a href="tel:0786669969" class="mob-cta btn">&#9742; 07 86 66 99 69</a>
+  <a href="https://wa.me/33786669969" class="btn btn-wa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<div class="bc"><a href="index.html">Accueil</a> <span>›</span> Tuyauterie</div>
+<div class="ph r">
+  <p class="lbl">Tuyauterie</p>
+  <h1>Tuyauterie navale<br><em>et industrielle à Marseille.</em></h1>
+  <p class="lead">Réseaux inox et acier, réparation de circuits, maintenance ferries et navires. SMIM intervient sur le port de Marseille, La Ciotat, Fos-sur-Mer et toute la région.</p>
+  <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+    <a href="tel:0786669969" class="btn btn-dark">&#9742; Appeler</a>
+    <a href="https://wa.me/33786669969" target="_blank" rel="noopener" class="btn btn-wa">WhatsApp</a>
+  </div>
+</div>
+<section class="sp" style="background:var(--white)">
+  <div style="margin-bottom:3rem" class="r"><p class="lbl">Nos prestations</p><h2>Tuyauterie<br><em>navale et industrie</em></h2></div>
+  <div class="svc-grid r d1">
+    <div class="svc"><p class="svc-n">01</p><p class="svc-name">Tuyauterie navale</p><p class="svc-desc">Fabrication et pose de réseaux à bord de navires et ferries. Inox, acier noir, cuivre selon les circuits.</p></div>
+    <div class="svc"><p class="svc-n">02</p><p class="svc-name">Réparation de circuits</p><p class="svc-desc">Diagnostic et réparation de fuites, remplacement de tronçons défaillants.</p></div>
+    <div class="svc"><p class="svc-n">03</p><p class="svc-name">Maintenance ferries</p><p class="svc-desc">Interventions sur les ferries en escale à Marseille. Réactivité pour minimiser les temps d'arrêt.</p></div>
+    <div class="svc"><p class="svc-n">04</p><p class="svc-name">Réseaux industriels</p><p class="svc-desc">Pose et remplacement sur sites industriels. Eau, air comprimé, fluides divers en inox ou acier.</p></div>
+    <div class="svc"><p class="svc-n">05</p><p class="svc-name">Soudure inox et acier</p><p class="svc-desc">Assemblage TIG inox ou MIG acier. Travaux soignés conformes aux exigences du milieu naval.</p></div>
+    <div class="svc"><p class="svc-n">06</p><p class="svc-name">Mise en conformité</p><p class="svc-desc">Remplacement de tuyauteries vétustes, mise aux normes de réseaux existants.</p></div>
+  </div>
+</section>
+<div class="dv"></div>
+<section class="sp-sm" style="background:var(--bg)">
+  <div class="r"><p class="lbl">Zone d'intervention</p>
+  <h2 style="margin-bottom:.8rem">Tuyauterie<br><em>sur tout le littoral.</em></h2>
+  <p class="bt" style="max-width:500px;margin-bottom:1.5rem">Nous intervenons sur les ports, chantiers navals et sites industriels de la région PACA.</p>
+  <div class="zones r d1">
+    <span class="zt">Port de Marseille</span><span class="zt">La Ciotat</span><span class="zt">Fos-sur-Mer</span><span class="zt">Port-de-Bouc</span><span class="zt">Martigues</span><span class="zt">Berre-l'Étang</span><span class="zt">Toulon</span>
+  </div></div>
+</section>
+<div class="dv"></div>
+<section class="sp" style="background:var(--white)" id="contact">
+  <div class="two r"><div>
+  <p class="lbl">Contact &amp; Devis</p>
+  <h2 style="margin-bottom:1.2rem">Parlons de<br><em>votre projet.</em></h2>
+  <p class="bt" style="margin-bottom:2rem">La façon la plus rapide : appelez-nous ou envoyez une photo sur WhatsApp.</p>
+  <a href="tel:0786669969" class="cta-blk"><span class="cta-blk-ico">&#128222;</span><div><p class="cta-blk-lbl">Appel direct</p><p class="cta-blk-val">07 86 66 99 69</p></div></a>
+  <a href="https://wa.me/33786669969?text=Bonjour%2C%20devis%20svp." target="_blank" rel="noopener" class="cta-blk cta-blk-wa"><span class="cta-blk-ico">&#128172;</span><div><p class="cta-blk-lbl">Envoyer une photo</p><p class="cta-blk-val">WhatsApp</p></div></a>
+  <p style="margin-top:1.2rem;font-size:.8rem;color:var(--ink3);line-height:1.9">&#128205; Atelier au Rove, 13740<br>&#9993; smim.13@hotmail.com</p>
+</div><div class="r d1"><div class="sep-or"><span>ou remplissez le formulaire</span></div><form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+  <div class="two-fg">
+    <div class="fg"><label>Nom *</label><input type="text" name="nom" placeholder="Votre nom" required/></div>
+    <div class="fg"><label>Téléphone *</label><input type="tel" name="telephone" placeholder="06 00 00 00 00" required/></div>
+  </div>
+  <div class="fg"><label>Email</label><input type="email" name="email" placeholder="votre@email.fr"/></div>
+  <div class="fg"><label>Prestation</label>
+    <select name="prestation"><option value="">— Sélectionner —</option>
+    <option>Portail</option><option>Garde-corps</option><option>Escalier</option>
+    <option>Serrurerie</option><option>Pergola</option><option>Chaudronnerie</option>
+    <option>Tuyauterie navale</option><option>Tuyauterie industrielle</option><option>Autre</option>
+    </select>
+  </div>
+  <div class="fg"><label>Description</label><textarea name="message" placeholder="Dimensions, style, délai, site d'intervention…"></textarea></div>
+  <button type="submit" class="btn btn-dark" style="width:100%;justify-content:center;border-radius:50px">Envoyer ma demande &rarr;</button>
+</form></div></div>
+</section>
+<footer>
+<div class="ft">
+  <div><p class="ft-name">SMIM</p><p class="ft-sub">Métallerie · Chaudronnerie · Tuyauterie</p>
+  <div class="ft-info"><p>&#128205; Le Rove, 13740</p><p><a href="tel:0786669969">&#9742; 07 86 66 99 69</a></p><p><a href="mailto:smim.13@hotmail.com">smim.13@hotmail.com</a></p><p><a href="https://wa.me/33786669969" target="_blank">WhatsApp</a></p></div></div>
+  <div class="ft-col"><p class="ft-ttl">Métallerie</p><a href="metallerie.html">Vue d'ensemble</a><a href="portails.html">Portails</a><a href="garde-corps.html">Garde-corps</a><a href="escaliers.html">Escaliers</a><a href="serrurerie.html">Serrurerie</a><a href="pergolas.html">Pergolas</a></div>
+  <div class="ft-col"><p class="ft-ttl">Activités</p><a href="chaudronnerie.html">Chaudronnerie</a><a href="tuyauterie.html">Tuyauterie</a><a href="realisations.html">Réalisations</a><a href="contact.html">Contact</a></div>
+  <div><p class="ft-ttl">Horaires</p><p class="ft-hrs">Lun – Ven<br><strong>8h – 18h</strong><br>Samedi<br><strong>9h – 12h</strong><br>Dimanche<br>Fermé</p></div>
+</div>
+<div class="ft-bot"><p>&#169; 2025 SMIM – Métallerie, Chaudronnerie &amp; Tuyauterie · Le Rove (13740)</p><p>Artisan Bouches-du-Rhône</p></div>
+</footer><script>
+(function(){
+  var h=document.getElementById('hbg'),m=document.getElementById('mob');
+  if(h&&m){h.addEventListener('click',function(){
+    m.classList.toggle('open');
+    var s=h.querySelectorAll('span');
+    if(m.classList.contains('open')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)';}
+    else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform='';}
+  });}
+  window.addEventListener('scroll',function(){
+    var n=document.querySelector('nav');
+    if(n)n.style.background=window.scrollY>40?'rgba(245,244,241,.98)':'rgba(245,244,241,.93)';
+  });
+  document.querySelectorAll('.r').forEach(function(el){
+    new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('v');}});},{threshold:0.08}).observe(el);
+  });
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    item.addEventListener('click',function(){item.classList.toggle('open');});
+  });
+})();
+</script>
+</body></html>
